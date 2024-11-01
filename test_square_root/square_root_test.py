@@ -15,7 +15,7 @@ class TestSqrtFunction(unittest.TestCase):
         self.assertEqual(result, tuple())
 
     def test_b_is_zero_c_negative(self):
-        result = sorted(get_square_roots(1, 0, -25))
+        result = get_square_roots(1, 0, -25)
         self.assertIsInstance(result, tuple)
         self.assertEqual(len(result), 2)
         self.assertAlmostEqual(result[0], -5)
@@ -33,20 +33,20 @@ class TestSqrtFunction(unittest.TestCase):
         self.assertEqual(result, tuple())
 
     def test_c_is_zero(self):
-        result = sorted(get_square_roots(2, 4, 0))
+        result = get_square_roots(2, 4, 0)
         self.assertIsInstance(result, tuple)
         self.assertEqual(len(result), 2)
         self.assertAlmostEqual(result[0], 0)
         self.assertAlmostEqual(result[1], -2)
 
     def test_d_greater_than_zero(self):
-        result = sorted(get_square_roots(2, -3, 1))
+        result = get_square_roots(2, -3, 1)
         self.assertIsInstance(result, tuple)
         self.assertEqual(len(result), 2)
         self.assertAlmostEqual(result[0], 0.5)
         self.assertAlmostEqual(result[1], 1)
 
-        result_2 = sorted(get_square_roots(12, 7, -3))
+        result_2 = get_square_roots(12, 7, -3)
         self.assertIsInstance(result_2, tuple)
         self.assertEqual(len(result_2), 2)
         self.assertAlmostEqual(result_2[0], -0.87052, 4)
