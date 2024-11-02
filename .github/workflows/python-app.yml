@@ -42,4 +42,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         coverage run -m unittest test_square_root/square_root_test.py
-        coveralls --service=github
+        coveralls
