@@ -38,8 +38,6 @@ jobs:
       run: |
         python -m unittest test_square_root/square_root_test.py
     - name: Coveralls
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        coverage run -m unittest test_square_root/square_root_test.py
-        coveralls
+      run: coveralls
+env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
