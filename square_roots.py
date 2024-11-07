@@ -1,9 +1,10 @@
 import math
 
-
 def get_square_roots(a, b, c):
 	if a == 0:
 		if b == 0:
+			if c == 0:
+				return ("any",)
 			return tuple()
 		return (-c/b, )
 	elif b == 0:
@@ -26,7 +27,7 @@ def get_square_roots(a, b, c):
 
 
 def main():
-	print(get_square_roots(1, 0, 3))
+	print(get_square_roots(0, 0, 0))
 
 if __name__ == "__main__":
 	main()

@@ -39,6 +39,11 @@ class TestSqrtFunction(unittest.TestCase):
         self.assertAlmostEqual(result[0], 0)
         self.assertAlmostEqual(result[1], -2)
 
+    def test_all_zero(self):
+        result = get_square_roots(0, 0, 0)
+        self.assertIsInstance(result, tuple)
+        self.assertEqual(result[0], "any")
+
     def test_d_greater_than_zero(self):
         result = get_square_roots(2, -3, 1)
         self.assertIsInstance(result, tuple)
@@ -51,7 +56,6 @@ class TestSqrtFunction(unittest.TestCase):
         self.assertEqual(len(result_2), 2)
         self.assertAlmostEqual(result_2[0], -0.87052, 4)
         self.assertAlmostEqual(result_2[1], 0.28719, 4)
-
 
 
     def test_d_lower_than_zero(self):
