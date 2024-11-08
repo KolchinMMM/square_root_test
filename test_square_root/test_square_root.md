@@ -1,6 +1,6 @@
 # Перечень тестов
 
-## Модуль примера (myfunc)
+## Модуль square_roots.py
 
 ### 1. Метод get_square_roots(a: numeric, b: numeric, c: numeric)
 
